@@ -3,11 +3,11 @@
    <head>
       <meta charset="utf-8">
       <meta http-equiv="X-UA-Compatible" content="IE=edge">
-      <title>Vinay Somawat - Computer Science Portfolio Webpage</title>
+      <title>Chad Eckles</title>
       <meta name="viewport" content="width=device-width, initial-scale=1">
-      <meta name="description" content="Portfolio webpage of Vinay Somawat" />
-      <meta name="keywords" content="portfolio,website,personal website,github,projects,computer science and engineering" />
-      <meta name="author" content="Vinay Somawat" />
+      <meta name="description" content="Portfolio webpage of Chad Eckles" />
+      <meta name="keywords" content="portfolio,website,personal website,github,projects" />
+      <meta name="author" content="Chad Eckles" />
       <!--Social Media icons--> 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
       <!-- Place favicon.ico and apple-touch-icon.png in the root directory -->
@@ -29,8 +29,6 @@
       <!-- Modernizr JS -->
       <script src="js/modernizr-2.6.2.min.js"></script>
        
-       <!-----Google adsense code---->
-       <script data-ad-client="ca-pub-2147632065762164" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
    </head>
    <body>
        <canvas id="canvas"></canvas>
@@ -40,7 +38,7 @@
             <!----Side bar--->
             <aside id="colorlib-aside" role="complementary" class="border js-fullheight">
                <div class="text-center">
-                  <div class="author-img" style="background-image: url(images/IMG_-wl1xai.jpg);"></div>
+                  <div class="author-img" style="background-image: url(images/account.svg);"></div>
                   <h1 id="colorlib-logo"><a href="https://vinaysomawat.github.io">Vinay Somawat</a></h1>
                </div>
                <nav id="colorlib-main-menu" role="navigation" class="navbar">
