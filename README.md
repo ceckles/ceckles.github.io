@@ -2,4 +2,4 @@
 
 
 <a href="https://certification.w3schools.com/w3certified.asp?id=13023252">
-      <img src="w3cert.png" border="0" /><img scr="https://certification.w3schools.com/w3certified_logo.png"/></a>
+      <img src="https://certification.w3schools.com/w3certified_logo.png" border="0" /><img scr="https://certification.w3schools.com/w3certified_logo.png"/></a>
