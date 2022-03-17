@@ -118,8 +118,13 @@ export default {
 			duration: "June 2021 - Present",
 			subtitle: "Full Stack Developer",
 			details: [
-				"WORK DETAILS HERE",
-				"KEY DETAILS",
+				"Automated Testing with Selenium and Mocha",
+				"Assist customer with production update or configuration with Apigee",
+				"CI/CD pipeline Gitlab, Jenkins",
+			        "Develope onboarding documentation for user to onboard to system",
+				"6 month supporting users trouble shooting tickets with platform.",
+				"Train peers in procedures for automated testing and validation"
+
 			],
 			tags: [
 				"JavaScript",
