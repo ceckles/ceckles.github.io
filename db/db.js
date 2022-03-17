@@ -93,7 +93,7 @@ export default {
 				projectName: "Brilliant Bananas",
 				image: "images/BrilliantBananas.png",
 				summary:
-					"Web Portfolio to showcase acadmics, skills, projects and contact details in better manner.",
+					"A Inventory app to showcase inventory tracking and minor sales use. using express,handlebars,sqlite3, and bootstrap elements.",
 				preview: "https://murmuring-chamber-30533.herokuapp.com/",
 				gitHubLink:"https://github.com/l1nd53y/Brilliant-Bananas-Project",
 				techStack: ["Reactjs", "Bootstrap","Express", "SQLite","Heroku"],
