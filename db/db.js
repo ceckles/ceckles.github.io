@@ -102,7 +102,7 @@ export default {
 				projectName: "Chore Bot",
 				image: "images/react-chore-bot.png",
 				summary:
-					"A React app to track chores and promp with notifications and sound when a chore or task is due.",
+					"A React app to track chores and prompt with notifications and sound when a chore or task is due.",
 				preview: "https://react-chore-bot.herokuapp.com/",
 				gitHubLink:"https://github.com/ceckles/react-chore-bot",
 				techStack: ["Reactjs", "Bootstrap", "Express",  "SQLite","Heroku"],
