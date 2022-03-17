@@ -123,7 +123,8 @@ export default {
 				"CI/CD pipeline Gitlab, Jenkins",
 			        "Develope onboarding documentation for user to onboard to system",
 				"6 month supporting users trouble shooting tickets with platform.",
-				"Train peers in procedures for automated testing and validation"
+				"Train peers in procedures for automated testing and validation",
+				"End to End testing of dev sites",
 
 			],
 			tags: [
