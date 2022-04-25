@@ -23,13 +23,13 @@ export default {
 		},
 		{
 			title: "Frameworks/Libraries",
-			skillName: "Express,  Sequelize. MongoDB
+			skillName: "Express,  Sequelize, Reactjs"
 			color: "6",
 			percentage: "50",
 		},
 		{
 			title: "Backend",
-			skillName: "Nodejs, Reactjs, Deno",
+			skillName: "Nodejs, Deno, MongoDB",
 			color: "2",
 			percentage: "40",
 		},
