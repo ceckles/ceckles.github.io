@@ -23,9 +23,9 @@ export default {
 		},
 		{
 			title: "Frameworks/Libraries",
-			skillName: "Express,  Sequelize, Reactjs"
+			skillName: "Express,  Sequelize, Reactjs",
 			color: "6",
-			percentage: "55",
+			percentage: "65",
 		},
 		{
 			title: "Backend",
