@@ -19,19 +19,19 @@ export default {
 			title: "Languages",
 			skillName: "Java, JavaScript, TypeScript",
 			color: "1",
-			percentage: "80",
+			percentage: "70",
 		},
 		{
 			title: "Frameworks/Libraries",
-			skillName: "Express,  Sequelize, Reactjs",
+			skillName: "Reactjs,  Express,  Sequelize",
 			color: "6",
-			percentage: "65",
+			percentage: "75",
 		},
 		{
 			title: "Backend",
-			skillName: "Nodejs, Deno, MongoDB",
+			skillName: "Nodejs,  Deno,  MongoDB",
 			color: "2",
-			percentage: "65",
+			percentage: "60",
 		},
 		{
 			title: "Clouds",
@@ -61,7 +61,7 @@ export default {
 			title: "Editor",
 			skillName: "VS Code,  Xcode, IntelliJ",
 			color: "6",
-			percentage: "75",
+			percentage: "70",
 		},
 	],
 	projects: {
