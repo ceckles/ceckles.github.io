@@ -266,7 +266,7 @@ export default {
 			label: "copyright-text",
 			data: [
 				"by Chad Eckles.",
-				"&copy; No Copyrights. Feel free to use this as a template."
+				"&copy; No Copyrights."
 			],
 		},
 	],
