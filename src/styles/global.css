@@ -1,6 +1,28 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
+
+@theme {
+  --color-bg: #0a0e14;
+  --color-bg-soft: #0f141c;
+  --color-bg-card: #131922;
+
+  --color-accent: #39ff9f;
+  --color-accent-dim: #1f8f5c;
+  --color-accent-soft: #7fffd4;
+
+  --color-ink: #e6edf3;
+  --color-ink-dim: #8b98a8;
+  --color-ink-faint: #5a6472;
+
+  --font-mono: 'JetBrains Mono', 'Fira Code', ui-monospace, SFMono-Regular, monospace;
+  --font-sans: 'Inter', ui-sans-serif, system-ui, sans-serif;
+
+  --shadow-glow: 0 0 0 1px rgba(57, 255, 159, 0.15), 0 8px 30px rgba(57, 255, 159, 0.08);
+  --shadow-card: 0 4px 24px rgba(0, 0, 0, 0.4);
+  --shadow-card-hover: 0 12px 40px rgba(0, 0, 0, 0.55), 0 0 0 1px rgba(57, 255, 159, 0.2);
+
+  --background-image-grid: linear-gradient(rgba(57, 255, 159, 0.06) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(57, 255, 159, 0.06) 1px, transparent 1px);
+}
 
 @layer base {
   html {
