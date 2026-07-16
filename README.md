@@ -34,8 +34,7 @@ All real content lives in `src/data/*.js` — no need to touch components to upd
 
 This repo is configured as a **user site** (`https://ceckles.github.io`), so `astro.config.mjs` sets `base: '/'`. Push this project to the `ceckles.github.io` repository's `main` branch.
 
-1. In the repo's Settings → Pages, set **Source** to "GitHub Actions".
-2. Push to `main` — `.github/workflows/deploy.yml` builds and deploys automatically.
+Settings → Pages → **Source** is set to "GitHub Actions." Every push to `main` triggers `.github/workflows/deploy.yml`, which builds and deploys automatically.
 
 > If you instead want this as a **project page** (e.g. `ceckles.github.io/portfolio`), change `base` in `astro.config.mjs` to `/portfolio/` and push to a separate repo named `portfolio`.
 
