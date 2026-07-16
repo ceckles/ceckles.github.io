@@ -27,7 +27,6 @@ All real content lives in `src/data/*.js` — no need to touch components to upd
 
 - `src/data/links.js` — real LinkedIn URL, X/Twitter handle
 - `public/resume/resume.pdf` — your actual resume (currently a text stub)
-- `src/components/ContactCTA.astro` — sign up at [formspree.io](https://formspree.io) (free) and swap `YOUR_FORM_ID` in the form's `action` attribute, or point it at your own form backend
 - `public/images/og-cover.svg` — swap for a real PNG/JPG social-preview image if you want reliable rendering on platforms that don't render SVG `og:image` (e.g. some link-preview bots)
 - `src/data/skills.js` — the `Years Building` stat
 
