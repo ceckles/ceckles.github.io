@@ -1,0 +1,20 @@
+---
+import { profile, socials } from '../data/links.js';
+const year = new Date().getFullYear();
+---
+
+<footer class="border-t border-white/5 py-8">
+  <div class="mx-auto flex max-w-6xl flex-col items-center justify-between gap-3 px-6 sm:flex-row sm:px-8">
+    <p class="font-mono text-xs text-ink-faint">
+      &copy; {year} {profile.name}. Built with Astro &amp; GSAP.
+    </p>
+    <div class="flex gap-5">
+      <a href={socials.github} target="_blank" rel="noopener noreferrer" class="font-mono text-xs text-ink-faint hover:text-accent">
+        GitHub
+      </a>
+      <a href={socials.linkedin} target="_blank" rel="noopener noreferrer" class="font-mono text-xs text-ink-faint hover:text-accent">
+        LinkedIn
+      </a>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,31 @@
+---
+import { posts } from '../data/blog.js';
+---
+
+{
+  posts.length > 0 && (
+    <section id="blog" class="section">
+      <p class="section-label reveal">05 · Writing</p>
+      <h2 class="section-title reveal">Recent articles</h2>
+
+      <div class="mt-10 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+        {posts.map((post) => (
+          <a
+            href={`/blog/${post.slug}/`}
+            class="card reveal flex flex-col gap-3 p-6 transition-transform hover:-translate-y-1 hover:shadow-card-hover"
+          >
+            <h3 class="font-bold text-ink">{post.title}</h3>
+            <p class="flex-1 text-sm text-ink-dim">{post.excerpt}</p>
+            <p class="font-mono text-xs text-ink-faint">
+              {post.date} · {post.readTime}
+            </p>
+          </a>
+        ))}
+      </div>
+
+      <a href="/blog/" class="btn-secondary mt-8">
+        Read more
+      </a>
+    </section>
+  )
+}

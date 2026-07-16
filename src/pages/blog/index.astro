@@ -1,0 +1,31 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { posts } from '../../data/blog.js';
+---
+
+<Layout title="Writing | Chad Eckles" description="Articles and notes from Chad Eckles.">
+  <section class="section max-w-3xl">
+    <a href="/#blog" class="font-mono text-sm text-ink-dim hover:text-accent">&larr; Back home</a>
+
+    <p class="section-label mt-8">Writing</p>
+    <h1 class="section-title">All articles</h1>
+
+    <div class="mt-10 space-y-6">
+      {
+        posts.map((post) => (
+          <a
+            href={`/blog/${post.slug}/`}
+            class="card flex flex-col gap-2 p-6 transition-transform hover:-translate-y-1 hover:shadow-card-hover"
+          >
+            <h2 class="text-xl font-bold text-ink">{post.title}</h2>
+            <p class="text-ink-dim">{post.excerpt}</p>
+            <p class="font-mono text-xs text-ink-faint">
+              {post.date} · {post.readTime}
+            </p>
+          </a>
+        ))
+      }
+      {posts.length === 0 && <p class="text-ink-dim">No posts yet — check back soon.</p>}
+    </div>
+  </section>
+</Layout>

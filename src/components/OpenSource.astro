@@ -1,0 +1,46 @@
+---
+import { socials } from '../data/links.js';
+
+const ghUsername = 'ceckles';
+const contributions = [
+  { name: 'nextjs-fullstack', note: 'Full-stack inventory system with auth, Prisma, and an analytics dashboard.' },
+  { name: 'express-movies', note: 'REST API with JWT auth, Zod validation, and per-user ownership rules.' },
+  { name: 'GO-Task-Cli', note: 'Dependency-free CLI task tracker written in Go.' },
+];
+---
+
+<section id="open-source" class="section">
+  <p class="section-label reveal">04 · Open Source</p>
+  <h2 class="section-title reveal">Building in the open</h2>
+
+  <div class="mt-10 grid gap-10 md:grid-cols-[1.1fr_1fr]">
+    <div class="reveal card overflow-hidden">
+      <img
+        src={`https://ghchart.rshah.org/39ff9f/${ghUsername}`}
+        alt={`${ghUsername}'s GitHub contribution graph`}
+        loading="lazy"
+        class="w-full"
+      />
+    </div>
+
+    <div class="reveal">
+      <h3 class="mb-4 font-mono text-sm uppercase tracking-[0.2em] text-ink-faint">
+        Notable contributions
+      </h3>
+      <ul class="space-y-4">
+        {
+          contributions.map((c) => (
+            <li class="card px-5 py-4">
+              <p class="font-mono text-sm font-semibold text-accent">{c.name}</p>
+              <p class="mt-1 text-sm text-ink-dim">{c.note}</p>
+            </li>
+          ))
+        }
+      </ul>
+
+      <a href={socials.github} target="_blank" rel="noopener noreferrer" class="btn-secondary mt-6">
+        View GitHub Profile
+      </a>
+    </div>
+  </div>
+</section>

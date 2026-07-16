@@ -1,0 +1,37 @@
+---
+import Layout from '../../layouts/Layout.astro';
+import { posts } from '../../data/blog.js';
+
+export function getStaticPaths() {
+  return posts.map((post) => ({
+    params: { slug: post.slug },
+    props: { post },
+  }));
+}
+
+const { post } = Astro.props;
+---
+
+<Layout title={`${post.title} | Chad Eckles`} description={post.excerpt}>
+  <article class="section max-w-2xl">
+    <a href="/blog/" class="font-mono text-sm text-ink-dim hover:text-accent">&larr; Back to writing</a>
+
+    <p class="section-label mt-8">Article</p>
+    <h1 class="text-4xl font-extrabold tracking-tight text-ink sm:text-5xl">{post.title}</h1>
+    <p class="mt-4 font-mono text-sm text-ink-faint">{post.date} · {post.readTime}</p>
+
+    <ul class="mt-6 flex flex-wrap gap-2">
+      {
+        post.tags.map((t: string) => (
+          <li class="rounded-full border border-accent/20 bg-accent/5 px-3 py-1 font-mono text-xs text-accent-soft">
+            {t}
+          </li>
+        ))
+      }
+    </ul>
+
+    <div class="prose prose-invert mt-10 max-w-none space-y-5 text-base leading-relaxed text-ink-dim sm:text-lg">
+      {post.body.map((paragraph: string) => <p>{paragraph}</p>)}
+    </div>
+  </article>
+</Layout>

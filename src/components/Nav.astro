@@ -1,0 +1,97 @@
+---
+const links = [
+  { href: '/#about', label: 'About' },
+  { href: '/#skills', label: 'Skills' },
+  { href: '/#projects', label: 'Projects' },
+  { href: '/#open-source', label: 'Open Source' },
+  { href: '/#blog', label: 'Writing' },
+  { href: '/#experience', label: 'Experience' },
+  { href: '/#contact', label: 'Contact' },
+];
+---
+
+<header
+  id="site-nav"
+  class="fixed inset-x-0 top-0 z-50 border-b border-white/5 bg-bg/80 backdrop-blur-md transition-shadow"
+>
+  <nav class="mx-auto flex max-w-6xl items-center justify-between px-6 py-4 sm:px-8" aria-label="Primary">
+    <a href="/" class="font-mono text-lg font-bold text-ink hover:text-accent">
+      <span class="text-accent">&gt;</span> chad<span class="text-accent">_</span>
+    </a>
+
+    <ul class="hidden items-center gap-8 md:flex">
+      {
+        links.map((link) => (
+          <li>
+            <a href={link.href} class="font-mono text-sm text-ink-dim hover:text-accent">
+              {link.label}
+            </a>
+          </li>
+        ))
+      }
+    </ul>
+
+    <button
+      id="nav-toggle"
+      type="button"
+      class="flex flex-col gap-1.5 rounded-md p-2 md:hidden"
+      aria-expanded="false"
+      aria-controls="mobile-menu"
+      aria-label="Toggle navigation menu"
+    >
+      <span class="h-0.5 w-6 bg-ink transition-transform" id="bar-1"></span>
+      <span class="h-0.5 w-6 bg-ink transition-opacity" id="bar-2"></span>
+      <span class="h-0.5 w-6 bg-ink transition-transform" id="bar-3"></span>
+    </button>
+  </nav>
+
+  <ul
+    id="mobile-menu"
+    class="hidden flex-col gap-1 border-t border-white/5 bg-bg px-6 pb-4 md:hidden"
+  >
+    {
+      links.map((link) => (
+        <li>
+          <a
+            href={link.href}
+            class="block py-3 font-mono text-base text-ink-dim hover:text-accent"
+          >
+            {link.label}
+          </a>
+        </li>
+      ))
+    }
+  </ul>
+</header>
+
+<script>
+  const toggle = document.getElementById('nav-toggle') as HTMLButtonElement | null;
+  const menu = document.getElementById('mobile-menu');
+
+  toggle?.addEventListener('click', () => {
+    const expanded = toggle.getAttribute('aria-expanded') === 'true';
+    toggle.setAttribute('aria-expanded', String(!expanded));
+    menu?.classList.toggle('hidden');
+    menu?.classList.toggle('flex');
+  });
+
+  // Close mobile menu after selecting a link
+  menu?.querySelectorAll('a').forEach((a) => {
+    a.addEventListener('click', () => {
+      toggle?.setAttribute('aria-expanded', 'false');
+      menu.classList.add('hidden');
+      menu.classList.remove('flex');
+    });
+  });
+
+  // Shrink/shadow nav on scroll
+  const header = document.getElementById('site-nav');
+  const onScroll = () => {
+    if (window.scrollY > 8) {
+      header?.classList.add('shadow-card');
+    } else {
+      header?.classList.remove('shadow-card');
+    }
+  };
+  document.addEventListener('scroll', onScroll, { passive: true });
+</script>

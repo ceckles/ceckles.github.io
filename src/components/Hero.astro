@@ -1,0 +1,128 @@
+---
+import { profile, socials, resumeUrl } from '../data/links.js';
+---
+
+<section class="relative flex min-h-screen items-center overflow-hidden pt-24">
+  <div class="section grid items-center gap-12 py-12 md:grid-cols-[1.2fr_1fr] md:py-0">
+    <div>
+      <p class="mb-4 font-mono text-sm text-accent" data-hero-reveal>
+        <span aria-hidden="true">$</span> whoami
+      </p>
+      <h1 class="text-4xl font-extrabold leading-tight tracking-tight text-ink sm:text-5xl lg:text-6xl" data-hero-reveal>
+        Hi, I'm <span class="text-accent">{profile.name}</span>
+      </h1>
+
+      <p class="mt-4 h-9 font-mono text-lg text-ink-dim sm:text-xl" data-hero-reveal>
+        <span id="typed-role" aria-live="polite">{profile.roles[0]}</span><span
+          class="ml-0.5 inline-block w-[2px] animate-pulse bg-accent align-middle"
+          style="height:1.1em"
+          aria-hidden="true"></span>
+      </p>
+
+      <p class="mt-6 max-w-xl text-base leading-relaxed text-ink-dim sm:text-lg" data-hero-reveal>
+        {profile.intro}
+      </p>
+
+      <div class="mt-8 flex flex-wrap gap-4" data-hero-reveal>
+        <a href="#projects" class="btn-primary">View Projects</a>
+        <a href={resumeUrl} class="btn-secondary" download>Download Resume</a>
+      </div>
+
+      <div class="mt-8 flex items-center gap-5" data-hero-reveal>
+        <a
+          href={socials.github}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="GitHub profile"
+          class="text-ink-dim hover:text-accent"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
+            <path d="M12 .5C5.73.5.98 5.24.98 11.52c0 4.94 3.2 9.13 7.65 10.61.56.1.76-.24.76-.54 0-.27-.01-1.15-.02-2.09-3.11.68-3.77-1.32-3.77-1.32-.51-1.3-1.24-1.65-1.24-1.65-1.01-.7.08-.68.08-.68 1.12.08 1.71 1.15 1.71 1.15 1 1.71 2.62 1.22 3.26.93.1-.72.39-1.22.71-1.5-2.48-.28-5.1-1.24-5.1-5.53 0-1.22.44-2.22 1.15-3-.11-.28-.5-1.42.11-2.96 0 0 .93-.3 3.05 1.14a10.6 10.6 0 0 1 5.56 0c2.12-1.44 3.05-1.14 3.05-1.14.61 1.54.22 2.68.11 2.96.72.78 1.15 1.78 1.15 3 0 4.3-2.62 5.24-5.12 5.52.4.35.76 1.03.76 2.08 0 1.5-.01 2.71-.01 3.08 0 .3.2.65.77.54A11.03 11.03 0 0 0 23.02 11.5C23.02 5.24 18.27.5 12 .5Z"/>
+          </svg>
+        </a>
+        <a
+          href={socials.linkedin}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="LinkedIn profile"
+          class="text-ink-dim hover:text-accent"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-6 w-6">
+            <path d="M20.45 20.45h-3.55v-5.57c0-1.33-.02-3.04-1.85-3.04-1.86 0-2.14 1.45-2.14 2.94v5.67H9.36V9h3.41v1.56h.05c.48-.9 1.64-1.85 3.37-1.85 3.6 0 4.27 2.37 4.27 5.45v6.29ZM5.34 7.43a2.06 2.06 0 1 1 0-4.12 2.06 2.06 0 0 1 0 4.12ZM7.12 20.45H3.56V9h3.56v11.45ZM22.22 0H1.77C.79 0 0 .77 0 1.73v20.54C0 23.23.79 24 1.77 24h20.45c.98 0 1.78-.77 1.78-1.73V1.73C24 .77 23.2 0 22.22 0Z"/>
+          </svg>
+        </a>
+        <a
+          href={socials.twitter}
+          target="_blank"
+          rel="noopener noreferrer"
+          aria-label="X (Twitter) profile"
+          class="text-ink-dim hover:text-accent"
+        >
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="currentColor" class="h-5 w-5">
+            <path d="M18.9 1.75h3.68l-8.04 9.19L24 22.25h-7.4l-5.8-7.58-6.64 7.58H.47l8.6-9.83L0 1.75h7.59l5.24 6.93 6.07-6.93Zm-1.29 18.36h2.04L6.5 3.78H4.31l13.3 16.33Z"/>
+          </svg>
+        </a>
+      </div>
+    </div>
+
+    <div class="hidden md:block" data-hero-reveal>
+      <div class="card overflow-hidden font-mono text-sm shadow-glow">
+        <div class="flex items-center gap-2 border-b border-white/5 bg-white/[0.02] px-4 py-3">
+          <span class="h-3 w-3 rounded-full bg-red-400/70"></span>
+          <span class="h-3 w-3 rounded-full bg-yellow-400/70"></span>
+          <span class="h-3 w-3 rounded-full bg-green-400/70"></span>
+          <span class="ml-3 text-xs text-ink-faint">chad@dev:~/portfolio</span>
+        </div>
+        <pre class="overflow-x-auto p-5 leading-relaxed text-ink-dim"><code><span class="text-accent">const</span> chad = {'{'}
+  role: <span class="text-accent-soft">"Full-Stack Developer"</span>,
+  stack: [<span class="text-accent-soft">"TypeScript"</span>, <span class="text-accent-soft">"Go"</span>, <span class="text-accent-soft">"React"</span>],
+  based_in: <span class="text-accent-soft">"Texas"</span>,
+  currently: <span class="text-accent-soft">"@AmplifyAI"</span>,
+  status: <span class="text-accent-soft">"shipping"</span>,
+{'}'};</code></pre>
+      </div>
+    </div>
+  </div>
+
+  <a
+    href="#about"
+    class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce text-ink-faint hover:text-accent"
+    aria-label="Scroll to About section"
+  >
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" class="h-6 w-6">
+      <path stroke-linecap="round" stroke-linejoin="round" d="M19 9l-7 7-7-7" />
+    </svg>
+  </a>
+</section>
+
+<script define:vars={{ roles: profile.roles }}>
+  const el = document.getElementById('typed-role');
+  if (el && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+    let roleIndex = 0;
+    let charIndex = roles[0].length;
+    let deleting = false;
+
+    const tick = () => {
+      const current = roles[roleIndex];
+      if (!deleting) {
+        charIndex++;
+        if (charIndex > current.length) {
+          deleting = true;
+          setTimeout(tick, 1400);
+          return;
+        }
+      } else {
+        charIndex--;
+        if (charIndex < 0) {
+          deleting = false;
+          roleIndex = (roleIndex + 1) % roles.length;
+          charIndex = 0;
+        }
+      }
+      el.textContent = roles[roleIndex].slice(0, charIndex);
+      setTimeout(tick, deleting ? 45 : 85);
+    };
+
+    setTimeout(tick, 1200);
+  }
+</script>

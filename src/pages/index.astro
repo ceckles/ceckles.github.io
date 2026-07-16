@@ -1,0 +1,64 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Hero from '../components/Hero.astro';
+import About from '../components/About.astro';
+import SkillsCloud from '../components/SkillsCloud.astro';
+import ProjectGrid from '../components/ProjectGrid.astro';
+import OpenSource from '../components/OpenSource.astro';
+import Blog from '../components/Blog.astro';
+import ExperienceTimeline from '../components/ExperienceTimeline.astro';
+import ContactCTA from '../components/ContactCTA.astro';
+---
+
+<Layout>
+  <Hero />
+  <About />
+  <SkillsCloud />
+  <ProjectGrid />
+  <OpenSource />
+  <Blog />
+  <ExperienceTimeline />
+  <ContactCTA />
+</Layout>
+
+<script>
+  import { gsap } from 'gsap';
+  import { ScrollTrigger } from 'gsap/ScrollTrigger';
+
+  gsap.registerPlugin(ScrollTrigger);
+
+  const prefersReducedMotion = window.matchMedia('(prefers-reduced-motion: reduce)').matches;
+
+  if (prefersReducedMotion) {
+    document.querySelectorAll('.reveal').forEach((el) => {
+      el.classList.remove('reveal');
+      (el as HTMLElement).style.opacity = '1';
+      (el as HTMLElement).style.transform = 'none';
+    });
+  } else {
+    document.querySelectorAll('.reveal').forEach((el, i) => {
+      gsap.to(el, {
+        opacity: 1,
+        y: 0,
+        duration: 0.7,
+        delay: (i % 4) * 0.06,
+        ease: 'power3.out',
+        scrollTrigger: {
+          trigger: el,
+          start: 'top 88%',
+          once: true,
+        },
+      });
+    });
+
+    document.querySelectorAll('[data-hero-reveal]').forEach((el, i) => {
+      gsap.from(el, {
+        opacity: 0,
+        y: 18,
+        duration: 0.7,
+        delay: 0.15 + i * 0.1,
+        ease: 'power3.out',
+      });
+    });
+  }
+</script>
