@@ -19,10 +19,8 @@ export const profile = {
 
 export const socials = {
   github: 'https://github.com/ceckles',
-  // TODO: replace with your real LinkedIn URL
   linkedin: 'https://www.linkedin.com/in/chad-eckles/',
-  // TODO: replace with your real X/Twitter handle, or remove this line and its usage in Hero.astro
-  twitter: 'https://x.com/REPLACE-ME',
+  twitter: 'https://x.com/chad1020',
 };
 
 // Drop your real resume PDF at public/resume/resume.pdf — this just needs to match the filename.

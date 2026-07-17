@@ -39,6 +39,9 @@ export const projects = [
     tech: ['Go', 'Fiber', 'MongoDB', 'React', 'Vite', 'TypeScript', 'Chakra UI', 'TanStack Query'],
     github: 'https://github.com/ceckles/react-go',
     demo: 'https://react-go-api-task.vercel.app',
+    // The Render-hosted Go backend spins down on inactivity, so the live demo can get stuck on
+    // "Loading..." for visitors — skip the auto-screenshot rather than capture a broken-looking state.
+    noScreenshot: true,
     stars: 0,
     outcome: 'Working CRUD todos with real-time status toggling, running as two independently deployed services.',
     featured: true,
